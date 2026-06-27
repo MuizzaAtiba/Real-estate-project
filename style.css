@@ -1,0 +1,504 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  border: none;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  transition: 0.4s ease-in-out;
+}
+html {
+  scroll-behavior: smooth;
+}
+button {
+  padding: 12px 24px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 20px;
+}
+.first-button {
+  background-color: #442d1c;
+}
+.second-button {
+  background-color: transparent;
+  border: 2px solid white;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  padding: 20px 50px;
+  color: white;
+  box-shadow: 0 0 20px grey;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+header ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  font-weight: bold;
+}
+header ul li a {
+  color: #000;
+}
+header ul li a:hover {
+  color: #442d1c;
+  cursor: pointer;
+}
+.hero {
+  flex-direction: column;
+  gap: 20px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  filter: blur(5px);
+  z-index: -1;
+  inset: 0;
+  background-image: url(./images/istockphoto-2155879454-612x612.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.hero h1 {
+  font-size: 90px;
+  font-family: "League Spartan", sans-serif;
+  color: white;
+}
+
+.hero p {
+  font-size: 18px;
+  color: white;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+.first-button:hover {
+  background-color: black;
+}
+
+.second-button:hover {
+  background-color: white;
+  color: #442d1c;
+}
+.featured {
+  padding: 100px 50px;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+.featured h2 {
+  font-size: 50px;
+  font-family: "League Spartan", sans-serif;
+  margin-bottom: 10px;
+}
+
+.featured p {
+  margin-bottom: 40px;
+  color: gray;
+}
+
+.property-grid {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 300px;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card h3 {
+  margin: 15px 0 5px;
+}
+
+.card p {
+  color: gray;
+  margin-bottom: 20px;
+}
+.why {
+  padding: 100px 50px;
+  text-align: center;
+  background-color: white;
+}
+
+.why h2 {
+  font-size: 50px;
+  font-family: "League Spartan", sans-serif;
+  margin-bottom: 10px;
+}
+
+.why p {
+  color: gray;
+  margin-bottom: 40px;
+}
+
+.why-container {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.why-box {
+  width: 280px;
+  padding: 30px;
+  border-radius: 12px;
+  background: #f9f9f9;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: 0.4s ease;
+}
+
+.why-box h3 {
+  margin-bottom: 10px;
+  color: #442d1c;
+}
+
+.why-box p {
+  color: gray;
+}
+
+.why-box:hover {
+  transform: translateY(-10px);
+  background-color: #604b3d;
+}
+
+.why-box:hover h3,
+.why-box:hover p {
+  color: white;
+}
+.why-box img {
+  width: 70px;
+  margin-bottom: 20px;
+}
+footer {
+  background: #2c1c11;
+  padding: 70px 50px 20px;
+}
+
+.foot-wrap {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.foot-wrap div {
+  max-width: 250px;
+}
+
+.foot-wrap div h3 {
+  color: white;
+  margin-bottom: 20px;
+  font-family: "League Spartan", sans-serif;
+}
+
+.foot-wrap div p,
+.foot-wrap div a {
+  color: #d6d6d6;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.foot-wrap div a:hover {
+  color: white;
+}
+
+.foot-wrap div ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.mission {
+  padding: 100px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  flex-direction: row-reverse;
+  gap: 50px;
+  background-image: url(./images/pexels-essentia-media-2154502099-33685861.jpg);
+}
+.testimonials {
+  padding: 100px 50px;
+  background: linear-gradient(to right, #2c1c11, #604b3d);
+}
+
+.testimonials h2 {
+  text-align: center;
+  font-size: 55px;
+  color: white;
+  margin-bottom: 15px;
+  font-family: "League Spartan", sans-serif;
+}
+
+.sub {
+  text-align: center;
+  color: #ddd;
+  margin-bottom: 50px;
+}
+
+.test-wrap {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.test-card {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 300px;
+  padding: 30px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+}
+
+.test-card img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  border: 3px solid white;
+}
+
+.test-card h3 {
+  margin-bottom: 5px;
+}
+
+.test-card p {
+  margin-top: 20px;
+  line-height: 1.6;
+}
+.Contact-us {
+  font-family: "Cormorant Garamond", serif;
+}
+.contact {
+  background: #050505;
+  padding: 120px 50px;
+  color: white;
+}
+
+.contact-head {
+  margin-bottom: 70px;
+}
+
+.contact-head p {
+  letter-spacing: 6px;
+  color: #8c6d56;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.contact-head h2 {
+  font-size: 170px;
+  line-height: 0.9;
+  font-family: "Times New Roman", serif;
+  font-weight: 400;
+}
+
+.contact-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 80px;
+}
+
+.contact-left div {
+  margin-bottom: 35px;
+}
+
+.contact-left h4 {
+  color: #8c6d56;
+  margin-bottom: 8px;
+  letter-spacing: 3px;
+}
+
+.contact-left span {
+  color: #d6d6d6;
+}
+
+.contact-left p {
+  margin-top: 50px;
+  color: #999;
+  line-height: 1.7;
+}
+
+.contact-form {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.contact-form input {
+  background: none;
+  border-bottom: 1px solid #444;
+  padding: 15px 0;
+  color: white;
+  font-size: 16px;
+}
+.contact-form textarea {
+  font-size: 16px;
+  border-bottom: 1px solid #444;
+  height: 100px;
+  background: transparent;
+}
+.contact-form button {
+  color: black;
+  width: 100%;
+}
+.contact-form input:focus {
+  border: none;
+  outline: none;
+}
+.contact-form textarea:focus {
+  border: none;
+  outline: none;
+}
+.services {
+  padding: 100px 50px;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.services p:first-child {
+  color: #604b3d;
+  font-weight: bold;
+  letter-spacing: 4px;
+  margin-bottom: 15px;
+}
+
+.services h2 {
+  font-size: 55px;
+  margin-bottom: 50px;
+  font-family: "League Spartan", sans-serif;
+}
+
+.service-wrap {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.service-card {
+  width: 280px;
+  padding: 35px;
+  background: white;
+  border: 4px solid #442d1c;
+}
+
+.service-card h1 {
+  font-size: 50px;
+  color: #e5e5e5;
+}
+
+.service-card h3 {
+  color: #442d1c;
+  margin: 10px 0;
+}
+
+.service-card p {
+  color: gray;
+}
+
+.Cta {
+  padding: 80px 40px;
+  background: #191919;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.Cta p {
+  color: white;
+  font-family: "Arimo", sans-serif;
+}
+.Cta span {
+  font-style: italic;
+}
+.get-started {
+  background: white;
+  border-radius: 20px;
+  color: black;
+  width: 120px;
+}
+.get-started2 {
+  background: white;
+  border-radius: 15px;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  padding: 10px 15px;
+  gap: 10px;
+}
+.Cta h2 {
+  color: white;
+  font-size: 70px;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  font-family: "League Spartan", sans-serif;
+}
+.Cta img {
+  width: 100px;
+}
+.get-started2 img {
+  width: 30px;
+}
+.gallery{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.gallery img{
+  width: 320px;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 25px;
+}
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+/* Look for logo, upload on github and share */
